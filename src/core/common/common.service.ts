@@ -1,9 +1,19 @@
 import { Injectable } from '@nestjs/common';
+import axios from 'axios';
 
 @Injectable()
 export class CommonService {
-  toTimestamp(strDate): number {
-    const datum = Date.parse(strDate) / 1000;
-    return datum;
+  async triggerIngestionMockAPI(uniqueFileId: string) {
+    try {
+      const response = await axios.post(`http://localhost:3000/ingestion/trigger/${uniqueFileId}`);
+      
+      if (response.status === 200) {
+        console.log(`Ingestion triggered for file ID: ${uniqueFileId}`);
+      } else {
+        console.error(`Ingestion failed for file ID: ${uniqueFileId}`);
+      }
+    } catch (error) {
+      console.error('Error triggering ingestion API:', error);
+    }
   }
 }
