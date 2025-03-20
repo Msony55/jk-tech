@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Media } from 'src/media/entities/media.entity';
 import { JwtTokenService } from 'src/core/jwt-token/jwt-token.service';
 import { ConfigService } from '@nestjs/config';
+import { CommonService } from '../core/common/common.service';
 
 @Module({
   imports: [
@@ -13,6 +14,6 @@ import { ConfigService } from '@nestjs/config';
     TypeOrmModule.forFeature([Media]),
   ],
   controllers: [MediaController],
-  providers: [MediaService,JwtTokenService, ConfigService],
+  providers: [MediaService,JwtTokenService, ConfigService, CommonService],
 })
 export class MediaModule {}
