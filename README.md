@@ -11,9 +11,7 @@ A NestJS-based project that provides authentication, media management, and other
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
-- [Testing](#testing)
 - [Technologies Used](#technologies-used)
-- [License](#license)
 
 ---
 
@@ -30,7 +28,7 @@ A NestJS-based project that provides authentication, media management, and other
 ---
 
 ## Project Structure
-
+```
 jk-tech/
 ├── src/
 │   ├── auth/
@@ -79,7 +77,7 @@ jk-tech/
 ├── tsconfig.json
 ├── tsconfig.build.json
 ├── README.md
-
+```
 ---
 ## Installation
 
@@ -89,9 +87,11 @@ jk-tech/
    cd jk-tech
 
 2. Install dependencies:
+   ```bash
     npm install
 
 3. Build the project:
+   ```bash
     npm run build
 
 ## Environment Variables
@@ -115,21 +115,27 @@ AWS_S3_BUCKET_NAME=your-s3-bucket-name
 ```
 ## Usage
 Start the Development Server
+```bash
 npm run start:dev
+```
 
 Lint the Code
+```bash
 npm run lint
+```
 
 Testing
 Run Unit Tests
+```
 npm run test
+```
 
 ## Technologies Used
 
-NestJS: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
-TypeScript: A strongly typed programming language that builds on JavaScript.
-TypeORM: An ORM for TypeScript and JavaScript.
-AWS S3: Cloud storage for file uploads.
-Jest: A testing framework for unit and integration tests.
-PDF-Parse: A library for extracting metadata from PDF files.
+1. NestJS: Progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+2. TypeScript: A strongly typed programming language that builds on JavaScript.
+3. TypeORM: ORM for TypeScript and JavaScript, simplifying database interactions.
+4. AWS S3: Cloud storage for file uploads.
+5. Jest: Testing framework for unit and integration tests.
+6. PDF-Parse: Library for extracting metadata from PDF files.
 
