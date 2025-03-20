@@ -2,10 +2,10 @@ import { Body, Controller, Post, Headers, UseFilters, UseGuards } from '@nestjs/
 import { AuthService } from './auth.service';
 import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
 import { HttpExceptionFilter } from '../core/http-exception.filter';
-import { Roles } from 'src/core/common/custom.decorator';
-import { UserRole } from 'src/user/enum/user.role';
+import { Roles } from '../core/common/custom.decorator';
+import { UserRole } from '../user/enum/user.role';
 import { LoginDto, LogoutDto, RefreshTokenDto   } from './dto';
-import { AuthGuard } from 'src/core/guards/auth.guard';
+import { AuthGuard } from '../core/guards/auth.guard';
 
 @Controller('auth')
 @ApiTags('Auth')

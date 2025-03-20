@@ -2,7 +2,6 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import bcrypt from "bcrypt";
 import { LoginDto, LogoutDto, RefreshTokenDto  } from './dto';
 import { JwtTokenService } from '../core/jwt-token/jwt-token.service';
-// import { HttpService } from '@nestjs/axios';
 import { UserEntity } from '../user/entities/user.entity';
 import { Repository } from 'typeorm';
 import { RefreshTokenEntity } from './entities/refresh-token.entity';

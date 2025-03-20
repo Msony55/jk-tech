@@ -17,9 +17,9 @@ import { UserService } from './user.service';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
 import { HttpExceptionFilter } from '../core/http-exception.filter';
-import { Roles } from 'src/core/common/custom.decorator';
+import { Roles } from '../core/common/custom.decorator';
 import { UserRole } from './enum/user.role';
-import { AuthGuard } from 'src/core/guards/auth.guard';
+import { AuthGuard } from '../core/guards/auth.guard';
 
 @Controller('user')
 @ApiTags('User')
